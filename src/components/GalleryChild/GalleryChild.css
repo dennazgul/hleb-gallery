@@ -1,0 +1,64 @@
+.picWidth {
+    width: 50%
+}
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+}
+.galleryGrid {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.smallPicInners {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+.smallPicInners :first-child {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+}
+.smallPicInners :nth-child(2) {
+    color: green;
+    font-size: 1.5em;
+    text-align: left;
+}
+.smallPicArrow {
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: white;
+    transform: rotate(-45deg);
+}
+@media (min-width: 900px) and (max-width: 1299px) {
+    .galleryGrid {
+        height: 450px;    
+    } 
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    .galleryGrid {
+        height: 300px;
+    }
+    .smallPicInners :first-child {
+        font-size: 1.5em;
+    }
+    .smallPicInners :nth-child(2) {
+        font-size: 1em
+    } 
+}
+@media (max-width: 599px) {
+    .picWidth {
+        width: 100%
+    }
+}
+.hoveringPics:hover {
+    transition: all 0.3s ;
+    opacity: 0.6;
+}
+.fas {
+    cursor: pointer;
+}
